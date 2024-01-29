@@ -1,0 +1,30 @@
+ion-toggle {
+  --handle-width: 25px;
+  --handle-height: 27px;
+  --handle-max-height: auto;
+
+  contain: none;
+}
+
+ion-toggle::part(track),
+ion-toggle.toggle-checked::part(track) {
+  background: #ddd;
+  width: 70px;
+  /* Required for iOS handle to overflow the height of the track */
+}
+
+ion-toggle::part(handle) {
+  background-image: url(./../assets/left.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  background-color: red;
+}
+
+ion-toggle.toggle-checked::part(handle) {
+  background-repeat: no-repeat;
+  background-image: url(./../assets/right.png);
+  background-position: center;
+  background-color: lime;
+  background-size: 100%;
+}
