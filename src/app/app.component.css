@@ -1,30 +1,107 @@
-ion-toggle {
-  --handle-width: 25px;
-  --handle-height: 27px;
+/* ion-toggle {
+  --handle-width: 40px;
+  --handle-height: 40px;
   --handle-max-height: auto;
-
+  margin-right: 10px;
   contain: none;
+  position: relative;
 }
 
 ion-toggle::part(track),
 ion-toggle.toggle-checked::part(track) {
-  background: #ddd;
-  width: 70px;
-  /* Required for iOS handle to overflow the height of the track */
+  background: #f2f6f9;
+  width: 140px;
+  position: absolute;
+  height: 40px;
+}
+ion-toggle.toggle-checked::part(handle) {
+  background-image: url(./../assets/arrow-left.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70%;
+  width: 40px;
+  height: 40px;
+  z-index: 999;
+  background-color: #ef001f;
 }
 
 ion-toggle::part(handle) {
-  background-image: url(./../assets/left.png);
   background-repeat: no-repeat;
+  background-image: url(./../assets/arrow-right.svg);
   background-position: center;
-  background-size: 100%;
-  background-color: red;
+  background-color: #1ba51c;
+  background-size: 70%;
+  height: 40px;
+  width: 40px;
+  z-index: 999;
 }
 
-ion-toggle.toggle-checked::part(handle) {
-  background-repeat: no-repeat;
-  background-image: url(./../assets/right.png);
-  background-position: center;
-  background-color: lime;
-  background-size: 100%;
+ion-label {
+  font-size: 12px;
+  position: absolute;
+  z-index: 9;
+  top: -7px;
+  right: -122px;
 }
+
+
+.toggle-checked ion-label {
+  top: -7px !important;
+  right: -84px !important;
+} */
+
+.container {
+  flex-direction: column;
+}
+
+.track {
+  background: #f2f6f9;
+  width: 100%;
+  position: absolute;
+  height: 40px;
+  border-radius: 100px;
+}
+
+ion-card {
+  width: 40px;
+  position: relative;
+  height: 40px;
+  z-index: 99;
+  box-shadow: none;
+  background-color: transparent;
+  margin: 0px;
+}
+
+ion-card-content {
+  height: 24px;
+  padding: 8px;
+  background-color: #1ba51c;
+  border-radius: 100px;
+}
+
+.danger {
+  background-color: #ef001f !important;
+}
+
+.cont {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+p {
+  z-index: 1;
+  transition: all 3s ease-in;
+  transition-duration: all 2s;
+  font-size: 14px;
+  color: #0f0f0f;
+}
+/* 
+.left {
+  transition: all 0.3s ease;
+  left: 24px !important;
+} */
